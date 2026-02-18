@@ -1,5 +1,12 @@
-on: [push, pull_request, workflow_dispatch]
-# whitespace
+on:
+  push:
+    branches:
+      - totem
+  pull_request:
+    branches:
+      - totem
+  workflow_dispatch:
+
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
